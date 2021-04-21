@@ -8,9 +8,9 @@ describe('workspace-project App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
+  it('should have Stefan Sweig App as a title', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('stefan-sweig-app app is running!');
+    expect(browser.getTitle()).toEqual('Stefan Sweig App');
   });
 
   afterEach(async () => {
