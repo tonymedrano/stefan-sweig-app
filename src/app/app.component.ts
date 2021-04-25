@@ -21,6 +21,26 @@ export class AppComponent {
   books$ = this.store.pipe(select(selectBooks));
   bookCollection$ = this.store.pipe(select(selectBookCollection));
 
+  code: string = `
+  function Shape(){
+    // this is a comment
+    this.name = 'Shape';
+    this.toString = function(){return this.name;};
+  }
+  
+  
+  function Shape2D(){
+    this.name = 'Shape 2D';
+  }
+  
+  function Triangle(base,height){
+      this.name = 'Triangle';
+      this.base = base;
+      this.height = height;
+      this.getArea = function(){return this.base*this.height/2;};
+  }
+  `
+
   onAdd(bookId) {
     this.store.dispatch(addBook({ bookId }));
   }
