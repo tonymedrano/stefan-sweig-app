@@ -1,0 +1,13 @@
+<!--
+Filename: /Users/tonymedrano/Desktop/PROGRAMMING/stefan-sweig-app/src/app/book-collection/book-collection.component.html
+Path: /Users/tonymedrano/Desktop/PROGRAMMING/stefan-sweig-app
+Created Date: Saturday, April 24th 2021, 7:51:35 pm
+Author: Tony Alexander Medrano
+
+Copyright (c) 2021 Your Company
+-->
+
+<div class="book-item" *ngFor="let book of books">
+    <p>{{book.volumeInfo.title}}</p><span> by {{book.volumeInfo.authors}}</span>
+    <button (click)="remove.emit(book.id)" data-test="remove-button">Remove from Collection</button>
+</div>
